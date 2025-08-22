@@ -1,0 +1,34 @@
+@SistemaDenunciasMinimalApi_HostAddress = http://localhost:5221
+
+###
+GET {{SistemaDenunciasMinimalApi_HostAddress}}/tipos-denuncia
+
+###
+GET {{SistemaDenunciasMinimalApi_HostAddress}}/estados-denuncia
+ 
+###
+GET {{SistemaDenunciasMinimalApi_HostAddress}}/denuncias
+
+###
+POST {{SistemaDenunciasMinimalApi_HostAddress}}/denuncias
+Content-Type: application/json
+
+{
+  "titulo": "Robo en la calle",
+  "descripcion": "Me robaron la bicicleta ayer",
+  "tipoId": 1,
+  "cedulaUsuario": "1234567890"
+}
+
+###
+PUT {{SistemaDenunciasMinimalApi_HostAddress}}/denuncias/3
+Content-Type: application/json
+
+{
+  "titulo": "Robo en la calle",
+  "descripcion": "Me robaron el telefono ayer",
+  "estado": 2
+}
+
+###
+DELETE {{SistemaDenunciasMinimalApi_HostAddress}}/denuncias/11
